@@ -5,6 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRM PROGRAM</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+  <!-- google charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+
+  <script>
+    // 원형차트
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() { 
+      // 차트 데이터 정의
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Element');
+      data.addColumn('number', 'Percentage');
+      data.addRows([
+        ['Nitrogen', 0.78],
+        ['Oxygen', 0.21],
+        ['Other', 0.01]
+      ]);
+
+      // 옵션
+      var options = {
+        legend:'left',
+        title:'My Big Pie Chart',
+        pieHole : 0.4,
+        width:400,
+        height:300
+      }
+
+      // 차트 그리기
+      var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
+      chart.draw(data, options);
+    }
+  </script>
+
 <body>
   <div id="myPieChart"></div>
 </body>
