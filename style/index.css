@@ -62,7 +62,7 @@ input[type="text"] {
 }
 
 .gradient_purple {
-  border-image: linear-gradient(to right, rgb(110, 88, 163), rgb(236, 110, 116));
+  border-image: linear-gradient(to right, #6e58a3, #ec6e74);
   background-origin: border-box;
   border-image-slice: 1;
   background-clip: content-box, border-box;
@@ -83,7 +83,14 @@ input[type="text"] {
   top: 2rem;
 
   color: white;
+  outline: none;
+  padding: 0.5rem;
   background-color: #121119;
+  border-radius: 10px;
+}
+
+.select_option {
+  padding: 0.5rem;
 }
 
 .chart_content {

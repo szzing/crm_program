@@ -13,12 +13,10 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://www.google.com/jsapi"></script>
 
-  <!-- script -->
-  <script src="./script/line_chart.js"></script>
-
   <!-- style -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/slider.css">
 
 <body class="darkmode">
   <div class="container">
@@ -64,10 +62,10 @@
       <!-- 지표 선택 -->
       <select class="select_index">
         <option selected disabled hidden>지표 선택</option>
-        <option>시간</option>
-        <option>요일</option>
-        <option>매출</option>
-        <option>객단가</option>
+        <option class="select_option">시간</option>
+        <option class="select_option">요일</option>
+        <option class="select_option">매출</option>
+        <option class="select_option">객단가</option>
       </select>
 
       <!-- 차트 -->
@@ -97,8 +95,27 @@
           <!-- 구매 전환 목적 -->
           <div class="purchase_conversion">
             <!-- 도넛형 그래프 + 슬라이더 -->
-            <div>구매전환 목적</div>
-            <input type="range" step="10" min="0" max="150">
+            <div class="donut-chart-block block">
+              <div class="donut-chart">
+                <div id="section1" class="clip">
+                  <div class="item"></div>
+                </div>
+                <div id="section2" class="clip">
+                  <div class="item"></div>
+                </div>
+                <div id="section3" class="clip">
+                  <div class="item"></div>
+                </div>
+                <div class="center">
+                  <span>구매전환 목적</span>
+                </div>
+              </div>
+            </div>
+            <div class="range-slider">
+              <input type="range" orient="vertical" min="0" max="100" />
+              <div class="range-slider__bar"></div>
+              <div class="range-slider__thumb"></div>
+            </div>
           </div>
 
           <!-- 로열티 상승 -->
@@ -111,6 +128,10 @@
     </div>
 
   </div>
+
+  <!-- script -->
+  <script src="./script/line_chart.js"></script>
+  <script src="./script/slider.js"></script>
 
 </body>
 </html>
