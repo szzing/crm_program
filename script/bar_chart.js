@@ -4,17 +4,10 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 var data = google.visualization.arrayToDataTable([
   ['X', '지표1', '지표2'],
-  [0, 0, 0],
   [1, 1, 2],
   [2, 5, 1],
   [3, 4, 2],
-  [4, 7, 4],
-  [5, 2, 3],
-  [6, 5, 2],
-  [7, 3, 7],
-  [8, 2, 5],
-  [9, 4, 2],
-  [10, 3, 6]
+  [4, 7, 4]
 ]);
 
 var options = {
@@ -37,16 +30,15 @@ var options = {
     viewWindowMode:'explicit',
     viewWindow: {
         min: 0,
-        max: 8
+        max: 10
     }
   },
-  lineWidth: 5,
   series: {
-    0: { color: '#ef4766'},
+    0: { color: '#566db4'},
     1: { color: '#4bc5d6'}
   }
 };
 
-var chart = new google.visualization.LineChart(document.getElementById('myChart'));
+var chart = new google.visualization.ColumnChart(document.getElementById('myBarChart'));
   chart.draw(data, options);
 }

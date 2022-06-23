@@ -62,6 +62,7 @@
     <div class="chart-data">
 
       <!-- 지표 선택 -->
+      <div class="select-index__wrap">
       <select class="select-index">
         <option selected disabled hidden>지표 선택</option>
         <option class="select-option">시간</option>
@@ -69,9 +70,13 @@
         <option class="select-option">매출</option>
         <option class="select-option">객단가</option>
       </select>
+      <div class="select-arrow"></div>
+      </div>
 
       <!-- 차트 -->
-      <div id="myChart" class="chart-content"></div>
+      <div class="chart-content">
+        <div id="myChart"></div>
+      </div>
 
     </div>
 
@@ -81,6 +86,8 @@
       <!-- 하단 좌측 -->
       <div class="bottom-content">
         <h3 class="bottom-content__title">1Q 월단위 데이터</h3>
+        <!-- 임시차트 -->
+        <div id="myBarChart"></div>
       </div>
 
       <!-- 하단 우측 //스와이프 or 버튼 클릭으로 변경-->
@@ -153,6 +160,7 @@
 
   <!-- script -->
   <script src="./script/line_chart.js"></script>
+  <script src="./script/bar_chart.js"></script>
   <script src="./script/range_slider.js"></script>
   <script src="./script/content_slider.js"></script>
 
