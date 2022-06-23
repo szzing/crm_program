@@ -1,0 +1,34 @@
+.content-slider__wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.content-slider {
+  width:800px;
+  transition: 0.5s;
+}
+
+.content-slider__inner {
+  width: 400px;
+  height: 250px;
+  float: left;
+}
+
+.content-slider-btns {
+  position: absolute;
+  padding: 10px;
+  z-index: 5;
+}
+
+.content-slider__btn {
+  border: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.none_btn {
+  background: #4b4e63;
+}

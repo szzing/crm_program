@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./style/index.css">
   <link rel="stylesheet" href="./style/range_slider.css">
+  <link rel="stylesheet" href="./style/content_slider.css">
 
 <body>
   <div class="container">
@@ -85,17 +86,16 @@
       <!-- 하단 우측 //스와이프 or 버튼 클릭으로 변경-->
       <div class="bottom-content">
         <h3 class="bottom-content__title">제목이 들어가야해요</h3>
-        
-        <div class="radio-index">
-          <input type="radio" name="sel" class="red" checked>
-          <input type="radio" name="sel" class="blue">
-        </div>
 
         <!-- 스와이프로 교체되는 부분 -->
         <div class="content-slider__wrap">
-          <ul class="content-slider">
+          <div class="content-slider-btns">
+            <button id="content-slider-btn1" class="content-slider__btn gradient-bg_orange"></button>
+            <button id="content-slider-btn2" class="content-slider__btn gradient-bg_blue"></button>
+          </div>
+          <div class="content-slider">
             <!-- 구매 전환 목적 -->
-            <li id="purchase-conversion" class="content-slider__inner">
+            <div id="purchase-conversion" class="content-slider__inner">
               <!-- 도넛형 그래프 + 슬라이더 -->
               <div class="donut-chart-block block">
                 <div class="donut-chart">
@@ -118,14 +118,32 @@
                 <div class="range-slider__bar"></div>
                 <div class="range-slider__thumb"></div>
               </div>
-            </li>
+            </div>
 
             <!-- 로열티 상승 -->
-            <li id="royalty-rise" class="content-slider__inner">
-              <div>로열티 상승</div>
-            </li>
+            <div id="royalty-rise" class="content-slider__inner">
+              <div class="donut-chart-block block">
+                <div class="donut-chart">
+                  <!-- 임시 도넛차트 -->
+                  <div id="donut-section1" class="clip gradient-bg_blue">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section2" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section3" class="clip gradient-bg_blue">
+                    <div class="item"></div>
+                  </div>
+                  <div class="donut-center">
+                    <span>로열티<br>상승</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          </ul>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -136,6 +154,7 @@
   <!-- script -->
   <script src="./script/line_chart.js"></script>
   <script src="./script/range_slider.js"></script>
+  <script src="./script/content_slider.js"></script>
 
 </body>
 </html>

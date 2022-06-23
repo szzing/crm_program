@@ -59,27 +59,6 @@ input {
   border-bottom: 3px solid transparent;
 }
 
-.gradient-border__orange {
-  border-image: linear-gradient(to right, #ef4766, #fbbd97);
-  background-origin: border-box;
-  border-image-slice: 1;
-  background-clip: content-box, border-box;
-}
-
-.gradient-border__blue {
-  border-image: linear-gradient(to right, #566db4, #4bc5d6);
-  background-origin: border-box;
-  border-image-slice: 1;
-  background-clip: content-box, border-box;
-}
-
-.gradient-border__purple {
-  border-image: linear-gradient(to right, #6e58a3, #ec6e74);
-  background-origin: border-box;
-  border-image-slice: 1;
-  background-clip: content-box, border-box;
-}
-
 /* 그래프 부분 */
 .chart-data {
   position: relative;
@@ -121,17 +100,39 @@ input {
   padding: 1rem;
 }
 
-.purchase-conversion {
+#purchase-conversion, #royalty-rise {
   display: flex;
   padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
 }
 
-input[type="radio"] {
-  padding: 0;
-  outline: none;
-  border: none;
+/* 색상 관련*/
+.gradient-bg_orange{
+  background: linear-gradient(to bottom right, #ef4766, #fbbd97);;
 }
 
-.red {
-  accent-color: #ef4766;
+.gradient-bg_blue{
+  background: linear-gradient(to bottom right, #566db4, #4bc5d6);;
+}
+
+.gradient-border__orange {
+  border-image: linear-gradient(to right, #ef4766, #fbbd97);
+  background-origin: border-box;
+  border-image-slice: 1;
+  background-clip: content-box, border-box;
+}
+
+.gradient-border__blue {
+  border-image: linear-gradient(to right, #566db4, #4bc5d6);
+  background-origin: border-box;
+  border-image-slice: 1;
+  background-clip: content-box, border-box;
+}
+
+.gradient-border__purple {
+  border-image: linear-gradient(to right, #6e58a3, #ec6e74);
+  background-origin: border-box;
+  border-image-slice: 1;
+  background-clip: content-box, border-box;
 }

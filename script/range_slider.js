@@ -17,7 +17,7 @@ function updateDonut(percent, element){
     element.parentNode.querySelector("#donut-section3 .item").style.msTransform = "rotate(" +  offset + "deg)";
     element.parentNode.querySelector("#donut-section3").style.MozTransform = "rotate(180deg)";
     element.parentNode.querySelector("#donut-section3 .item").style.MozTransform = "rotate(" +  offset + "deg)";   
-    element.parentNode.querySelector("#donut-section3 .item").style.background = "linear-gradient(#fbbd97, #ef4766)";
+    element.parentNode.querySelector("#donut-section3 .item").style.backgroundImage = "radial-gradient(circle, #ef4766 25%, #fbbd97)";
   }
   // element.parentNode.querySelector("span").innerHTML = percent + "%";
 }
