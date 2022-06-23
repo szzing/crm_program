@@ -22,7 +22,7 @@ input {
   border: 1px solid #6e58a3;
 }
 
-.setup_btn {
+.setup-btn {
   position: absolute;
   top: 2rem;
   right: 5rem;
@@ -30,22 +30,22 @@ input {
 }
 
 /* 엑셀데이터 */
-.excel_data {
+.excel-data {
   padding: 0 1rem;
   width: 1080px;
   display: flex;
 }
 
-.excel_content {
+.excel-content {
   width: 400px;
   margin: 0.5rem;
 }
 
-.excel_items {
+.excel-content__items {
   display: flex;
 }
 
-.excel_item {
+.excel-content__item {
   font-size: inherit;
   text-align: center;
   color: white;
@@ -59,21 +59,21 @@ input {
   border-bottom: 3px solid transparent;
 }
 
-.gradient_border_orange {
+.gradient-border__orange {
   border-image: linear-gradient(to right, #ef4766, #fbbd97);
   background-origin: border-box;
   border-image-slice: 1;
   background-clip: content-box, border-box;
 }
 
-.gradient_border_blue {
+.gradient-border__blue {
   border-image: linear-gradient(to right, #566db4, #4bc5d6);
   background-origin: border-box;
   border-image-slice: 1;
   background-clip: content-box, border-box;
 }
 
-.gradient_border_purple {
+.gradient-border__purple {
   border-image: linear-gradient(to right, #6e58a3, #ec6e74);
   background-origin: border-box;
   border-image-slice: 1;
@@ -81,14 +81,14 @@ input {
 }
 
 /* 그래프 부분 */
-.chart_data {
+.chart-data {
   position: relative;
   margin: 1rem 0;
   padding: 1rem;
   height: 350px;
 }
 
-.select_index {
+.select-index {
   z-index: 5;
   position: absolute;
   right: 5rem;
@@ -101,27 +101,27 @@ input {
   border-radius: 10px;
 }
 
-.select_option {
+.select-option {
   padding: 0.5rem;
 }
 
-.chart_content {
+.chart-content {
   background-color: white;
 }
 
 /* 하단 데이터 */
-.bottom_data {
+.bottom-data {
   display: flex;
   justify-content: space-around;
 }
 
-.bottom_content {
+.bottom-content {
   width: 450px;
   margin: 1rem;
   padding: 1rem;
 }
 
-.purchase_conversion {
+.purchase-conversion {
   display: flex;
   padding: 1rem;
 }

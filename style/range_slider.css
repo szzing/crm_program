@@ -15,7 +15,7 @@
   transform: scale(0.8);
 }
 
-.donut-chart .center {
+.donut-chart .donut-center {
   background: #121119;
   border-radius: 50%;
   height: 70%;
@@ -25,7 +25,7 @@
   width: 70%;
 }
 
-.center span {
+.donut-center span {
   font-weight: 800;
   text-align: center;
   display: block;
@@ -52,20 +52,20 @@
   font-size: 1.5rem;
 }
 
-#section1 {
+#donut-section1 {
   transform: rotate(0deg);
 }
 
-#section1 .item {
+#donut-section1 .item {
   background: linear-gradient(#ef4766, #fbbd97);
   transform: rotate(180deg);
 }
 
-#section2 {
+#donut-section2 {
   transform: rotate(180deg);
 }
 
-#section2 .item {
+#donut-section2 .item {
   background: #4b4e63;
   transform: rotate(180deg);
 }

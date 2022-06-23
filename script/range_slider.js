@@ -2,22 +2,22 @@ function updateDonut(percent, element){
   //var percent = 45;
   if (percent < 50){
     offset = (360 / 100) * percent;
-    element.parentNode.querySelector("#section3").style.webkitTransform = "rotate(" + offset + "deg)";
-    element.parentNode.querySelector("#section3 .item").style.webkitTransform = "rotate(" + (180 - offset) + "deg)";
-    element.parentNode.querySelector("#section3").style.msTransform = "rotate(" + offset + "deg)";
-    element.parentNode.querySelector("#section3 .item").style.msTransform = "rotate(" + (180 - offset) + "deg)";
-    element.parentNode.querySelector("#section3").style.MozTransform = "rotate(" + offset + "deg)";
-    element.parentNode.querySelector("#section3 .item").style.MozTransform = "rotate(" + (180 - offset) + "deg)";
-    element.parentNode.querySelector("#section3 .item").style.background = "#4b4e63";
+    element.parentNode.querySelector("#donut-section3").style.webkitTransform = "rotate(" + offset + "deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.webkitTransform = "rotate(" + (180 - offset) + "deg)";
+    element.parentNode.querySelector("#donut-section3").style.msTransform = "rotate(" + offset + "deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.msTransform = "rotate(" + (180 - offset) + "deg)";
+    element.parentNode.querySelector("#donut-section3").style.MozTransform = "rotate(" + offset + "deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.MozTransform = "rotate(" + (180 - offset) + "deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.background = "#4b4e63";
   } else { 
     offset = ((360 / 100) * percent) - 180;
-    element.parentNode.querySelector("#section3").style.webkitTransform = "rotate(180deg)";
-    element.parentNode.querySelector("#section3 .item").style.webkitTransform = "rotate(" +  offset + "deg)";
-    element.parentNode.querySelector("#section3").style.msTransform = "rotate(180deg)";
-    element.parentNode.querySelector("#section3 .item").style.msTransform = "rotate(" +  offset + "deg)";
-    element.parentNode.querySelector("#section3").style.MozTransform = "rotate(180deg)";
-    element.parentNode.querySelector("#section3 .item").style.MozTransform = "rotate(" +  offset + "deg)";   
-    element.parentNode.querySelector("#section3 .item").style.background = "linear-gradient(#fbbd97, #ef4766)";
+    element.parentNode.querySelector("#donut-section3").style.webkitTransform = "rotate(180deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.webkitTransform = "rotate(" +  offset + "deg)";
+    element.parentNode.querySelector("#donut-section3").style.msTransform = "rotate(180deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.msTransform = "rotate(" +  offset + "deg)";
+    element.parentNode.querySelector("#donut-section3").style.MozTransform = "rotate(180deg)";
+    element.parentNode.querySelector("#donut-section3 .item").style.MozTransform = "rotate(" +  offset + "deg)";   
+    element.parentNode.querySelector("#donut-section3 .item").style.background = "linear-gradient(#fbbd97, #ef4766)";
   }
   // element.parentNode.querySelector("span").innerHTML = percent + "%";
 }

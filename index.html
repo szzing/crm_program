@@ -22,107 +22,110 @@
   <div class="container">
 
     <!-- 엑셀 데이터 -->
-    <div class="excel_data">
+    <div class="excel-data">
 
-      <div id="excel_total" class="excel_content">
-        <h3 class="content_title">Total</h3>
-        <div class="excel_items">
-          <input type="text" class="excel_item gradient_border_orange" value="500,000">
-          <input type="text" class="excel_item gradient_border_blue" value="332">
-          <input type="text" class="excel_item gradient_border_purple" value="600">
+      <div id="excelTotal" class="excel-content">
+        <h3 class="excel-content__title">Total</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="500,000">
+          <input type="text" class="excel-content__item gradient-border__blue" value="332">
+          <input type="text" class="excel-content__item gradient-border__purple" value="600">
         </div>
       </div>
 
-      <div id="excel_average" class="excel_content">
-        <h3 class="content_title">평균</h3>
-        <div class="excel_items">
-          <input type="text" class="excel_item gradient_border_orange" value="90">
-          <input type="text" class="excel_item gradient_border_blue" value="300,000">
-          <input type="text" class="excel_item gradient_border_purple" value="200">
+      <div id="excelAverage" class="excel-content">
+        <h3 class="excel-content__title">평균</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="90">
+          <input type="text" class="excel-content__item gradient-border__blue" value="300,000">
+          <input type="text" class="excel-content__item gradient-border__purple" value="200">
         </div>
       </div>
 
-      <div id="excel_calculation" class="excel_content">
-        <h3 class="content_title">산출 데이터</h3>
-        <div class="excel_items">
-          <input type="text" class="excel_item gradient_border_orange" value="150">
-          <input type="text" class="excel_item gradient_border_blue" value="931,000">
+      <div id="excelCalculation" class="excel-content">
+        <h3 class="excel-content__title">산출 데이터</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="150">
+          <input type="text" class="excel-content__item gradient-border__blue" value="931,000">
         </div>
       </div>
 
     </div>
 
     <!-- 설정 버튼 -->
-    <div class="setup_btn">
+    <div class="setup-btn">
       <i class="bi bi-gear-fill"></i>
     </div>
 
     <!-- 그래프 부분 -->
-    <div class="chart_data">
+    <div class="chart-data">
 
       <!-- 지표 선택 -->
-      <select class="select_index">
+      <select class="select-index">
         <option selected disabled hidden>지표 선택</option>
-        <option class="select_option">시간</option>
-        <option class="select_option">요일</option>
-        <option class="select_option">매출</option>
-        <option class="select_option">객단가</option>
+        <option class="select-option">시간</option>
+        <option class="select-option">요일</option>
+        <option class="select-option">매출</option>
+        <option class="select-option">객단가</option>
       </select>
 
       <!-- 차트 -->
-      <div id="myChart" class="chart_content"></div>
+      <div id="myChart" class="chart-content"></div>
 
     </div>
 
     <!-- 하단 데이터 -->
-    <div class="bottom_data">
+    <div class="bottom-data">
 
       <!-- 하단 좌측 -->
-      <div class="bottom_content">
-        <h3 class="content_title">1Q 월단위 데이터</h3>
+      <div class="bottom-content">
+        <h3 class="bottom-content__title">1Q 월단위 데이터</h3>
       </div>
 
       <!-- 하단 우측 //스와이프 or 버튼 클릭으로 변경-->
-      <div class="bottom_content">
-        <h3 class="content_title">제목이 들어가야해요</h3>
+      <div class="bottom-content">
+        <h3 class="bottom-content__title">제목이 들어가야해요</h3>
         
-        <div class="radio_index">
+        <div class="radio-index">
           <input type="radio" name="sel" class="red" checked>
           <input type="radio" name="sel" class="blue">
         </div>
 
         <!-- 스와이프로 교체되는 부분 -->
-        <div>
-          <!-- 구매 전환 목적 -->
-          <div class="purchase_conversion">
-            <!-- 도넛형 그래프 + 슬라이더 -->
-            <div class="donut-chart-block block">
-              <div class="donut-chart">
-                <div id="section1" class="clip">
-                  <div class="item"></div>
-                </div>
-                <div id="section2" class="clip">
-                  <div class="item"></div>
-                </div>
-                <div id="section3" class="clip">
-                  <div class="item"></div>
-                </div>
-                <div class="center">
-                  <span>구매전환 목적</span>
+        <div class="content-slider__wrap">
+          <ul class="content-slider">
+            <!-- 구매 전환 목적 -->
+            <li id="purchase-conversion" class="content-slider__inner">
+              <!-- 도넛형 그래프 + 슬라이더 -->
+              <div class="donut-chart-block block">
+                <div class="donut-chart">
+                  <div id="donut-section1" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section2" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section3" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div class="donut-center">
+                    <span>구매전환 목적</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="range-slider">
-              <input type="range" orient="vertical" min="0" max="100" />
-              <div class="range-slider__bar"></div>
-              <div class="range-slider__thumb"></div>
-            </div>
-          </div>
+              <div class="range-slider">
+                <input type="range" orient="vertical" min="0" max="100" />
+                <div class="range-slider__bar"></div>
+                <div class="range-slider__thumb"></div>
+              </div>
+            </li>
 
-          <!-- 로열티 상승 -->
-          <div class="royalty_rise" hidden>
-            <div>로열티 상승</div>
-          </div>
+            <!-- 로열티 상승 -->
+            <li id="royalty-rise" class="content-slider__inner">
+              <div>로열티 상승</div>
+            </li>
+
+          </ul>
         </div>
 
       </div>
