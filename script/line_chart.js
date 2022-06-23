@@ -12,7 +12,9 @@ var data = google.visualization.arrayToDataTable([
   [5, 2, 3],
   [6, 5, 2],
   [7, 3, 7],
-  [8, 2, 5]
+  [8, 2, 5],
+  [9, 4, 2],
+  [10, 3, 6],
 ]);
 
 var options = {
