@@ -12,7 +12,7 @@
   height: 200px;
   margin: auto;
   border-radius: 100%;
-  transform: scale(0.8);
+  transform: scale(0.95);
 }
 
 .donut-chart .donut-center {
@@ -26,7 +26,8 @@
 }
 
 .donut-center span {
-  font-weight: 800;
+  font-weight: 500;
+  font-size: 18px;
   text-align: center;
   display: block;
   left: 50%;
@@ -98,6 +99,7 @@
   border-radius: 10px;
 }
 .range-slider input[type=range][orient=vertical] {
+  opacity: 0.5;
   position: relative;
   margin: 0;
   height: 100%;

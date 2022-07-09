@@ -1,5 +1,4 @@
 function updateDonut(percent, element){
-  //var percent = 45;
   if (percent < 50){
     offset = (360 / 100) * percent;
     element.parentNode.querySelector("#donut-section3").style.webkitTransform = "rotate(" + offset + "deg)";
@@ -39,7 +38,7 @@ function updateSlider(element) {
     [].forEach.call(document.getElementsByClassName("container"), function(el) {
       var inputs = [].slice.call(el.querySelectorAll('.range-slider input'));
       inputs.forEach(function (input) {
-          input.setAttribute('value', '50');
+          input.setAttribute('value', '65');
           updateSlider(input);
           input.addEventListener('input', function (element) {
               updateSlider(input);
