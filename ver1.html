@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM PROGRAM</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+  <!-- google charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/range_slider.css">
+  <link rel="stylesheet" href="./style/content_slider.css">
+
+<body>
+  <div class="container">
+
+    <!-- 엑셀 데이터 -->
+    <div class="excel-data">
+
+      <div id="excelTotal" class="excel-content">
+        <h3 class="excel-content__title">Total</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="500,000">
+          <input type="text" class="excel-content__item gradient-border__blue" value="332">
+          <input type="text" class="excel-content__item gradient-border__purple" value="600">
+        </div>
+      </div>
+
+      <div id="excelAverage" class="excel-content">
+        <h3 class="excel-content__title">평균</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="90">
+          <input type="text" class="excel-content__item gradient-border__blue" value="300,000">
+          <input type="text" class="excel-content__item gradient-border__purple" value="200">
+        </div>
+      </div>
+
+      <div id="excelCalculation" class="excel-content">
+        <h3 class="excel-content__title">산출 데이터</h3>
+        <div class="excel-content__items">
+          <input type="text" class="excel-content__item gradient-border__orange" value="150">
+          <input type="text" class="excel-content__item gradient-border__blue" value="931,000">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 설정 버튼 -->
+    <div class="setup-btn">
+      <i class="bi bi-gear-fill"></i>
+    </div>
+
+    <!-- 그래프 부분 -->
+    <div class="chart-data">
+
+      <!-- 지표 선택 -->
+      <div class="select-index__wrap">
+      <select class="select-index">
+        <option selected disabled hidden>지표 선택</option>
+        <option class="select-option">시간</option>
+        <option class="select-option">요일</option>
+        <option class="select-option">매출</option>
+        <option class="select-option">객단가</option>
+      </select>
+      <div class="select-arrow"></div>
+      </div>
+
+      <!-- 차트 -->
+      <div class="chart-content">
+        <div id="myChart"></div>
+      </div>
+
+    </div>
+
+    <!-- 하단 데이터 -->
+    <div class="bottom-data">
+
+      <!-- 하단 좌측 -->
+      <div class="bottom-content">
+        <h3 class="bottom-content__title">1Q 월단위 데이터</h3>
+        <!-- 임시차트 -->
+        <div id="myBarChart"></div>
+      </div>
+
+      <!-- 하단 우측 //스와이프 or 버튼 클릭으로 변경-->
+      <div class="bottom-content">
+        <h3 class="bottom-content__title">제목이 들어가야해요</h3>
+
+        <!-- 스와이프로 교체되는 부분 -->
+        <div class="content-slider__wrap">
+          <div class="content-slider-btns">
+            <button id="content-slider-btn1" class="content-slider__btn gradient-bg_orange"></button>
+            <button id="content-slider-btn2" class="content-slider__btn gradient-bg_blue"></button>
+          </div>
+          <div class="content-slider">
+            <!-- 구매 전환 목적 -->
+            <div id="purchase-conversion" class="content-slider__inner">
+              <!-- 도넛형 그래프 + 슬라이더 -->
+              <div class="donut-chart-block block">
+                <div class="donut-chart">
+                  <div id="donut-section1" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section2" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section3" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div class="donut-center">
+                    <span>구매전환 목적</span>
+                  </div>
+                </div>
+              </div>
+              <div class="range-slider">
+                <input type="range" orient="vertical" min="0" max="100" />
+                <div class="range-slider__bar"></div>
+                <div class="range-slider__thumb"></div>
+              </div>
+            </div>
+
+            <!-- 로열티 상승 -->
+            <div id="royalty-rise" class="content-slider__inner">
+              <div class="donut-chart-block block">
+                <div class="donut-chart">
+                  <!-- 임시 도넛차트 -->
+                  <div id="donut-section1" class="clip gradient-bg_blue">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section2" class="clip">
+                    <div class="item"></div>
+                  </div>
+                  <div id="donut-section3" class="clip gradient-bg_blue">
+                    <div class="item"></div>
+                  </div>
+                  <div class="donut-center">
+                    <span>로열티<br>상승</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- script -->
+  <script src="./script/line_chart.js"></script>
+  <script src="./script/bar_chart.js"></script>
+  <script src="./script/range_slider.js"></script>
+  <script src="./script/content_slider.js"></script>
+
+</body>
+</html>

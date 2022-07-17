@@ -17,152 +17,233 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./style/index.css">
   <link rel="stylesheet" href="./style/range_slider.css">
-  <link rel="stylesheet" href="./style/content_slider.css">
 
 <body>
-  <div class="container">
-
-    <!-- 엑셀 데이터 -->
-    <div class="excel-data">
-
-      <div id="excelTotal" class="excel-content">
-        <h3 class="excel-content__title">Total</h3>
-        <div class="excel-content__items">
-          <input type="text" class="excel-content__item gradient-border__orange" value="500,000">
-          <input type="text" class="excel-content__item gradient-border__blue" value="332">
-          <input type="text" class="excel-content__item gradient-border__purple" value="600">
-        </div>
+  <div class="header">
+    <div class="inner">
+      <div class="logo">
+        <h1>CRM_dashboard</h1>
+        <!-- <img src="https://awake-square.com/kor/images/common/logo.png" style="filter: invert(1) hue-rotate(180deg) saturate(500%) contrast(90%);"> -->
       </div>
-
-      <div id="excelAverage" class="excel-content">
-        <h3 class="excel-content__title">평균</h3>
-        <div class="excel-content__items">
-          <input type="text" class="excel-content__item gradient-border__orange" value="90">
-          <input type="text" class="excel-content__item gradient-border__blue" value="300,000">
-          <input type="text" class="excel-content__item gradient-border__purple" value="200">
-        </div>
+      <div class="date">
+        <h3>2021.09.14~2021.12.14</h3>
       </div>
-
-      <div id="excelCalculation" class="excel-content">
-        <h3 class="excel-content__title">산출 데이터</h3>
-        <div class="excel-content__items">
-          <input type="text" class="excel-content__item gradient-border__orange" value="150">
-          <input type="text" class="excel-content__item gradient-border__blue" value="931,000">
-        </div>
+      <div class="setup-btn">
+        <i class="bi bi-gear-fill"></i>
       </div>
-
     </div>
+  </div>
 
-    <!-- 설정 버튼 -->
-    <div class="setup-btn">
-      <i class="bi bi-gear-fill"></i>
+  <div class="main-title">
+    <div class="inner">
+      <h3>효과적인 고객관리를 위한 간편한 고객 세분화 솔루션</h3>
+      <h3>Segmentation Machine for CRM</h3>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 엑셀 데이터 -->
+    <div class="content-wrap">
+
+      <div class="data-summary__content">
+        <h2 class="content-title">분기 데이터</h2>
+        <span class="content-subtitle">Basic data for one quarter</span>
+        
+        <div class="data-summary__items">
+          <div class="data-summary__item">
+            <label for="order-amount">주문금액</label>
+            <input id="order-amount" type="text" value="50.4억" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-customer">주문고객수</label>
+            <input id="order-customer" type="text" value="9.4M" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-quantity">주문수량</label>
+            <input type="text" value="6.4K" disabled>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="data-summary__content">
+        <h2 class="content-title">평균 데이터</h2>
+        <span class="content-subtitle">Average values of quarterly data</span>
+        
+        <div class="data-summary__items">
+          <div class="data-summary__item">
+            <label for="order-amount">평균주문량</label>
+            <input id="order-amount" type="text" value="2.4K" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-customer">평균주문수</label>
+            <input id="order-customer" type="text" value="1.6회" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-quantity">평균객단가</label>
+            <input type="text" value="8.2만" disabled>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-summary__content">
+        <h2 class="content-title">산출 데이터</h2>
+        <span class="content-subtitle">Output data for one quarter</span>
+        
+        <div class="data-summary__items">
+          <div class="data-summary__item">
+            <label for="order-amount">충성고객</label>
+            <input id="order-amount" type="text" value="981" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-customer">기대매출</label>
+            <input id="order-customer" type="text" value="70.2억" disabled>
+          </div>
+
+          <div class="data-summary__item">
+            <label for="order-quantity">미집계</label>
+            <input type="text" value="21" disabled>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- 그래프 부분 -->
-    <div class="chart-data">
+    <div class="content-wrap">
+      <div class="chart__content">
+        <h2 class="content-title">시간별 데이터</h2>
+        <span class="content-subtitle">Sales Status by Time</span>
 
-      <!-- 지표 선택 -->
-      <div class="select-index__wrap">
-      <select class="select-index">
-        <option selected disabled hidden>지표 선택</option>
-        <option class="select-option">시간</option>
-        <option class="select-option">요일</option>
-        <option class="select-option">매출</option>
-        <option class="select-option">객단가</option>
-      </select>
-      <div class="select-arrow"></div>
+        <div class="chart">
+          <div id="salesStatusByTime" class="line-chart"></div>
+        </div>
       </div>
 
-      <!-- 차트 -->
-      <div class="chart-content">
-        <div id="myChart"></div>
+      <div class="chart__content">
+        <h2 class="content-title">요일별 데이터</h2>
+        <span class="content-subtitle">Sales Status by Day</span>
+        
+        <div class="chart">
+          <div id="salesStatusByDay" class="line-chart"></div>
+        </div>
       </div>
-
     </div>
 
     <!-- 하단 데이터 -->
-    <div class="bottom-data">
+    <div class="content-wrap">
 
-      <!-- 하단 좌측 -->
-      <div class="bottom-content">
-        <h3 class="bottom-content__title">1Q 월단위 데이터</h3>
-        <!-- 임시차트 -->
-        <div id="myBarChart"></div>
+      <div class="chart__content" id="orderFrequency">
+        <h2 class="content-title">주문빈도</h2>
+        <span class="content-subtitle">Order frequency status</span>
+
+        <div class="chart">
+          <div id="orderFrequencyChart" class="bar-chart"></div>
+        </div>
+
+        <div class="frequency-message">
+          <div class="message">
+            <label>주문빈도에 따른 추천 메시지 발송 주기</label>
+            <input type="text" value="7일">
+          </div>
+          <div class="message">
+            <label>평균주문빈도</label>
+            <input type="text" value="7.6일">
+          </div>
+        </div>
       </div>
 
-      <!-- 하단 우측 //스와이프 or 버튼 클릭으로 변경-->
-      <div class="bottom-content">
-        <h3 class="bottom-content__title">제목이 들어가야해요</h3>
-
-        <!-- 스와이프로 교체되는 부분 -->
-        <div class="content-slider__wrap">
-          <div class="content-slider-btns">
-            <button id="content-slider-btn1" class="content-slider__btn gradient-bg_orange"></button>
-            <button id="content-slider-btn2" class="content-slider__btn gradient-bg_blue"></button>
+      <div class="range__content">
+        <!-- 로열티 상승 -->
+        <div id="royalty-rise">
+          <div class="donut-chart-block block">
+            <div class="donut-chart">
+              <div id="donut-section1" class="clip gradient-bg_blue">
+                <div class="item"></div>
+              </div>
+              <div id="donut-section2" class="clip">
+                <div class="item"></div>
+              </div>
+              <div id="donut-section3" class="clip gradient-bg_blue">
+                <div class="item"></div>
+              </div>
+              <div class="donut-center">
+                <span>로열티<br>상승</span>
+              </div>
+            </div>
           </div>
-          <div class="content-slider">
-            <!-- 구매 전환 목적 -->
-            <div id="purchase-conversion" class="content-slider__inner">
-              <!-- 도넛형 그래프 + 슬라이더 -->
-              <div class="donut-chart-block block">
-                <div class="donut-chart">
-                  <div id="donut-section1" class="clip">
-                    <div class="item"></div>
-                  </div>
-                  <div id="donut-section2" class="clip">
-                    <div class="item"></div>
-                  </div>
-                  <div id="donut-section3" class="clip">
-                    <div class="item"></div>
-                  </div>
-                  <div class="donut-center">
-                    <span>구매전환 목적</span>
-                  </div>
-                </div>
-              </div>
-              <div class="range-slider">
-                <input type="range" orient="vertical" min="0" max="100" />
-                <div class="range-slider__bar"></div>
-                <div class="range-slider__thumb"></div>
-              </div>
-            </div>
 
-            <!-- 로열티 상승 -->
-            <div id="royalty-rise" class="content-slider__inner">
-              <div class="donut-chart-block block">
-                <div class="donut-chart">
-                  <!-- 임시 도넛차트 -->
-                  <div id="donut-section1" class="clip gradient-bg_blue">
-                    <div class="item"></div>
-                  </div>
-                  <div id="donut-section2" class="clip">
-                    <div class="item"></div>
-                  </div>
-                  <div id="donut-section3" class="clip gradient-bg_blue">
-                    <div class="item"></div>
-                  </div>
-                  <div class="donut-center">
-                    <span>로열티<br>상승</span>
-                  </div>
-                </div>
-              </div>
+          <div class="lock">
+            <div>
+              <i class="bi bi-lock-fill"></i>
+              <p>관리자에게 문의하세요</p>
             </div>
-
-            </div>
-
           </div>
         </div>
 
+        <!-- 구매 전환 목적 -->
+        <div id="purchase-conversion">
+          <div class="donut-chart-block block">
+            <div class="donut-chart">
+              <div id="donut-section1" class="clip">
+                <div class="item"></div>
+              </div>
+              <div id="donut-section2" class="clip">
+                <div class="item"></div>
+              </div>
+              <div id="donut-section3" class="clip">
+                <div class="item"></div>
+              </div>
+              <div class="donut-center">
+                <span>구매전환 목적</span>
+              </div>
+            </div>
+          </div>
+          <div class="range-slider">
+            <input type="range" orient="vertical" min="0" max="100" list="tickmarks"/>
+            <datalist id="tickmarks">
+              <option value="0"></option>
+              <option value="5"></option>
+              <option value="10"></option>
+              <option value="15"></option>
+              <option value="20"></option>
+              <option value="25"></option>
+              <option value="30"></option>
+              <option value="35"></option>
+              <option value="40"></option>
+              <option value="45"></option>
+              <option value="50"></option>
+              <option value="55"></option>
+              <option value="60"></option>
+              <option value="65"></option>
+              <option value="70"></option>
+              <option value="75"></option>
+              <option value="80"></option>
+              <option value="85"></option>
+              <option value="90"></option>
+              <option value="95"></option>
+              <option value="100"></option>
+            </datalist>
+            <div class="range-slider__bar"></div>
+            <div class="range-slider__thumb"></div>
+          </div>
+        </div>
       </div>
+
     </div>
 
   </div>
 
   <!-- script -->
-  <script src="./script/line_chart.js"></script>
-  <script src="./script/bar_chart.js"></script>
+  <script src="./script/salesStatusByTime.js"></script>
+  <script src="./script/salesStatusByDay.js"></script>
+  <script src="./script/orderFrequencyStatus.js"></script>
   <script src="./script/range_slider.js"></script>
-  <script src="./script/content_slider.js"></script>
 
 </body>
 </html>
